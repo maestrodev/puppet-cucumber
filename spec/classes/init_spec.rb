@@ -6,11 +6,12 @@ describe "cucumber" do
   end
   
   context "specific version" do
+    version = '1.2.1'
     let(:params) { {
-        :version => '1.2.1'
+        :version => version
     } }
 
-    it { should contain_package('cucumber').with( { 'provider' => 'gem', 'ensure' => '1.2.1'} ) } 
+    it { should contain_package('cucumber').with( { 'provider' => 'gem', 'ensure' => version} ) } 
   end
 
 end
